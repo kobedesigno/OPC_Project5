@@ -1,0 +1,95 @@
+/* <link rel="stylesheet" media="screen and (min-width: 2560px)" href="Grande_r.css" /> <!-- Pour ceux qui ont une résolution superieure à 2560px --> */
+body{
+    font: 3rem Helvetica;
+  }
+.grid-container{
+    grid-template-rows: 120px 1fr 120px;
+}
+.brand a{
+    font-size: 5rem;
+  }
+  .header-links a{
+    font-size: 4rem;
+  }
+  h1 {
+    font-size: 10rem;
+  }
+
+.Orinoco {
+  color: rgb(243, 165, 239);
+  font-size: 5rem;
+}
+  .product-description{
+    font-size: 3rem;
+  }
+  .product-price{
+    font-size: 4rem;
+  }
+  .product-image{
+    max-width: 64rem;
+    max-height: 64rem;
+  }
+  .product-name {
+    font-size: 8rem;
+  }
+
+.container {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.row {
+    width: 100%;
+}
+  
+/* PRODUCT PAGE */
+
+  .product2 {
+    font-size: 6rem;
+  }
+  
+  .cart-button-add {
+    width: 500px;
+    height: 10px;
+  }
+ 
+  
+  /*  CART PAGE  */
+  
+  .back {
+    width: 50rem; 
+  }
+
+  .product-cart {
+    max-width: 30rem;
+    max-height: 30rem;
+  }
+  form {
+    width: 700px;
+    height: 700px;
+    font-size: 3rem;
+
+  }
+  
+  #totalPrice {
+    font-size: 3rem;
+    text-align: center;
+  }
+  
+  
+  .form-group.error::after {
+    content: 'Ce champs est invalide';
+    display: block;
+    color: red;
+    padding: 5px 0;
+    font-size: .9rem;
+  }
+  .Ncommande {
+    font-size: 4rem;
+  }
+  .prixTotal {
+    font-size: 4rem;
+  }
+  
