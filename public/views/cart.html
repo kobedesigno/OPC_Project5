@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/ico" href="favicon/favicon.ico" />
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="icon" type="image/ico" href="../../favicon/favicon.ico" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Orinoco</title>
 </head>
@@ -14,20 +14,20 @@
     <div class="grid-container">
         <header class="header">
             <div class="brand">
-                <a class="navbar-brand" href="index.html">
-                    <img src="favicon/favicon.ico" width="50" height="50" alt="Info Logo" />
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../../favicon/favicon.ico" width="50" height="50" alt="Info Logo" />
                 </a>
-                <a href="index.html">Orinoco</a>
+                <a href="../index.html">Orinoco</a>
             </div>
             <div class="header-links">
-                <a class="cart" href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span>Cart <span class="product-numbers"></span></a>
-                <a href="index.html">Sign In</a>
+                <a class="cart" href="cart.html"><i class="fas fa-shopping-cart"></i> Cart <span class="product-numbers"></span></a>
+                <a href="../index.html">Sign In</a>
             </div>
         </header>
         <main class="main">
             <section id="emptyCart" hidden>
                 <h1>Votre panier est vide :)</h1>
-                <a href="index.html" class="back border">Retourner vers la page d'acceuil</a>
+                <a href="../index.html" class="back border">Retourner vers la page d'acceuil</a>
             </section>
             <section id="productPage" class="col">
                 <h1>Panier :</h1>
@@ -51,15 +51,15 @@
                     <h2>Formulaire de commande :</h2>
                     <div class="form-group">
                         <label for="last_name">Nom* :</label>
-                        <input class=”form-control” id="last_name" type="text" placeholder="Entrez votre nom" name="last_name" pattern="^\D*$" required>
+                        <input class=”form-control” id="last_name" type="text" placeholder="Entrez votre nom" name="last_name" pattern="^\D*$" maxlength="20" required>
                     </div>
                     <div class="form-group">
                         <label for="first_name">Prénom* :</label>
-                        <input class=”form-control” id="first_name" type="text" placeholder="Entrez votre prénom" name="first_name" pattern="^\D*$" required>
+                        <input class=”form-control” id="first_name" type="text" placeholder="Entrez votre prénom" name="first_name" pattern="^\D*$" maxlength="20" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email* :</label>
-                        <input class=”form-control” id="email" type="email" placeholder="Entrez votre Email" name="email" required>
+                        <input class=”form-control” id="email" type="email" placeholder="Entrez votre Email" name="email" maxlength="100" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
                     </div>
                     <div class="form-group">
                         <label for="adress">Adresse* :</label>
@@ -67,11 +67,11 @@
                     </div>
                     <div class="form-group">
                         <label for="city">Ville* :</label>
-                        <input class=”form-control” id="city" type="text" placeholder="Entrez votre ville" name="city" required>
+                        <input class=”form-control” id="city" type="text" placeholder="Entrez votre ville" name="city" maxlength="30" required>
                     </div>
                     <div class="form-group">
-                        <label for="message">Message :</label>
-                        <textarea class=”form-control” id="message" name="message"></textarea>
+                        <label for="message">Message : (300 caractères maximum)</label>
+                        <textarea class=”form-control” id="message" name="message" maxlength="300"></textarea>
                     </div>
                     <div>
                         <button type="submit" value="ok" class="btn btn-lg btn-success">Envoyer</button>
@@ -83,7 +83,7 @@
                 <h1>Merci <em class="prenom"></em>, Votre commande a bien été enregistré</h1>
                 <p class="Ncommande">Votre numero de commande est le : </p>
                 <p class="prixTotal">Prix Total: $</p>
-                <a href="index.html" class="back border">Retourner vers la page d'acceuil</a>
+                <a href="../index.html" class="back border">Retourner vers la page d'acceuil</a>
             </section>
         </main>
         <footer class="footer">
@@ -91,7 +91,7 @@
         </footer>
     </div>
 
-    <script src="src/cart.js"></script>
+    <script src="../../mvc/controllers/cart.js"></script>
 </body>
 </html>
 
