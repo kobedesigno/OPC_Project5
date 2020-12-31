@@ -24,7 +24,7 @@ function onLoadCartNumbers() {
 
 function updateTotalCost() { // Fonction qui va mettre à jour le prix Total du panier et l'afficher
     const TotalPrice = document.getElementById('totalPrice');
-    TotalPrice.textContent = 'Prix total: $' + cartCost;
+    TotalPrice.textContent = 'Prix total: $' + cartCost.toFixed(2);
 };
 
 function displayCart() { // Récuperer les données du localStorage pour les afficher
@@ -55,7 +55,6 @@ function displayCart() { // Récuperer les données du localStorage pour les aff
     }
 }
 displayCart();
-
 
 document.addEventListener('click', function (e) { // Event sur ce que l'on click
     let array = e.target['id'].split('-'); // tableau de l'id séparer par le -
