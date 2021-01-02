@@ -33,7 +33,7 @@ const getCameras = async function () { // fonction qui affiche le produit
             description.classList.add('product-description');
 
             let price = document.createElement('div');
-            let cameraPrice = document.createTextNode('$ ' + camerasData.price);
+            let cameraPrice = document.createTextNode('$ ' + (camerasData.price / 100).toFixed(2));
             price.appendChild(cameraPrice);
             cameras.appendChild(price);
             price.classList.add('product-price');
@@ -59,7 +59,7 @@ const getCameras = async function () { // fonction qui affiche le produit
             })
             // UTILISATION DE TEXT.CONTENT pour l'affichage du nom et du prix sur la page :
             document.getElementById("name").textContent = camerasData.name;
-            document.getElementById("price").textContent = camerasData.price.toFixed(2);
+            document.getElementById("price").textContent = (camerasData.price / 100).toFixed(2);
 
         } else {
             console.error('Retour du serveur : ', response.status)

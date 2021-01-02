@@ -12,7 +12,7 @@ const getCameras = async function () { // Fonction qui permet de récupérer les
                             <div class="product-name">${camera.name}</div>
                         </a>
                         <div class="product-description">Description : ${camera.description}</div>
-                        <div class="product-price">Price : $ ${camera.price.toFixed(2)}</div>
+                        <div class="product-price">Price : $ ${(camera.price / 100).toFixed(2)}</div>
                     </div>
                     </div>
                     `

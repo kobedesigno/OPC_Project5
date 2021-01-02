@@ -24,7 +24,7 @@ function onLoadCartNumbers() {
 
 function updateTotalCost() { // Fonction qui va mettre à jour le prix Total du panier et l'afficher
     const TotalPrice = document.getElementById('totalPrice');
-    TotalPrice.textContent = 'Prix total: $' + cartCost.toFixed(2);
+    TotalPrice.textContent = 'Prix total: $' + (cartCost / 100).toFixed(2);
 };
 
 function displayCart() { // Récuperer les données du localStorage pour les afficher
@@ -35,13 +35,13 @@ function displayCart() { // Récuperer les données du localStorage pour les aff
             productContainer.innerHTML += `
             <tr>
                 <td><img class="product-cart" src="${camerasData.imageUrl}" alt="product">${camerasData.name}</td>
-                <td>$${camerasData.price.toFixed(2)}</td>
+                <td>$${(camerasData.price / 100).toFixed(2)}</td>
                 <td>
                     <button id="${camerasData.name}-minus" class="btn minus-btn btn-info btn-lg" type="button">-</button>
                     ${camerasData.inCart}
                     <button id="${camerasData.name}-plus" class="btn plus-btn btn-info btn-lg" type="button">+</button>  
                 </td>
-                <td>$${(camerasData.price * camerasData.inCart).toFixed(2)}</td>
+                <td>$${((camerasData.price / 100) * camerasData.inCart).toFixed(2)}</td>
                 <td>
                     <button id="${camerasData.name}-delete"  class="btn btn-lg btn-danger">Supprimer 
                         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -248,7 +248,7 @@ form.addEventListener('submit', async function (e) {
             // Affichage de la commande
             document.querySelector('.Ncommande').textContent += idOrder;
             document.querySelector('.prenom').textContent += name;
-            document.querySelector('.prixTotal').textContent += cartCost;
+            document.querySelector('.prixTotal').textContent += (cartCost/100).toFixed(2);
             // Suppression du localStorage apès la commande et mis a jour de l'icone cart du header
             localStorage.removeItem('cartNumbers');
             localStorage.removeItem('productsInCart', );
